@@ -1,7 +1,14 @@
 header{
 	background-color: white;
-	height: 3em;
-	color: lightblue;
-	margin-bottom: 0.5em;
+	height: 5em;
+	color: teal;
 	text-align: center
+	
+	
+}
+
+header h2{
+	font-size: 2em;
+	display:inline-block;
+	vertical-align:	middle;	
 }
