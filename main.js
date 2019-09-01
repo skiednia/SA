@@ -1,58 +1,30 @@
-var pacientes = document
-    .querySelectorAll(".paciente");
+function convertTemp(direction)
+{
+ //instanciando objetos
+var fObj = document.convert.ftemp, cObj = document.convert.ctemp, kObj = document.convert.ktemp;
 
-for (var index = 0; index < pacientes.length; index++) {
-    const paciente = pacientes[index];
- 
-    var colunaPeso = paciente.querySelector(".info-peso");
-    var peso = colunaPeso.textContent;
-    var colunaAltura = paciente.querySelector(".info-altura");
-    var altura = colunaAltura.textContent;
-    var colunaImc = paciente.querySelector(".info-imc");
-
-    var pesoValido = true
-    var alturaValida = true 
-
-    if(peso <= 0 || peso > 600) {
-        pesoValido = false
-        colunaPeso.textContent = "Peso Inválido";
-        console.log(pesoValido)
-    }
-
-    
-    if(altura <= 0 || altura > 2.8) {
-        pesoValido = false
-        colunaAltura.textContent = "Altura Inválida";
-        console.log(alturaValida)
-    }
-
-    if (alturaValida && pesoValido) {
-        colunaImc.textContent = peso/(altura ** 2);
-    } else {
-        colunaImc.textContent = "valores inválidos";
-    }
+//definindo direções para conversões
+if (direction == "ftoc") 
+{
+    cObj.value = Math.round((fObj.value - 32) * (5/9));
+	kObj.value = Math.round((parseInt(cObj.value) + 459.67) * (5/9));
+} 
+else if (direction == "ktof") 
+ {
+	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) -  459.67);
+	cObj.value = Math.round((fObj.value - 32) * (5/9));
+	
+ }
+else
+ {
+	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) + 32);
+	kObj.value = Math.round((parseInt(cObj.value) + 273));
+ }
 }
 
-
-
-
-/*    switch (index) {
-    case 0:
-        colunaNome.style.backgroundColor = "red";
-        break;
-    case 1:
-        colunaNome.style.backgroundColor = "yellow";
-        break;
-     case 2:
-        colunaNome.style.backgroundColor = "green";
-        break;
-    case 3:
-        colunaNome.style.backgroundColor = "pink";
-        break;
-
-    case 4:
-        colunaNome.style.backgroundColor = "blue";
-        break;
-
+function clearAll()
+{
+document.convert.ftemp.value="";
+document.convert.ctemp.value="";
+document.convert.ktemp.value="";
 }
-*/
