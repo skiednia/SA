@@ -1,6 +1,6 @@
 header{
 	background-color: white;
-	height: 5em;
+	height: 7em;
 	color: teal;
 	text-align: center
 	
@@ -12,3 +12,5 @@ header h2{
 	display:inline-block;
 	vertical-align:	middle;	
 }
+
+/* codigos referentes ao titulo */

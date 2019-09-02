@@ -3,17 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <title> Conversor de temperaturas </title>
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-
+      <!-- Referenciando o CSS-->
      <script 	 
      type="text/javascript"
         src="main.js">    
       </script>
 </head>
 
-<body>
-
+<body> 
 <header>
      <div class="container">
     <h2 class="titulo">Conversor de temperaturas ヽ(^◇^*)/</h2>
@@ -22,7 +20,8 @@
 
 <form style="border: 1.5px double black; background-color: violet;
 	padding: 25px;text-align:center;"
-	name="convert">
+  name="convert">
+  <!--Design do Conversor principal -->
 
         Insira aqui seu valor em Fahrenheit: <input 	type="text" 
 		name="ftemp" 
@@ -46,10 +45,14 @@ onchange="convertTemp('ktof')">
 
 Kelvin
 
+<!-- Função referente à conversão -->
+
 <br /><br />
 <input 	type="button" 
 	value="Limpar para nova conversão" 
-	onclick="clearAll();">
+  onclick="clearAll();">
+  
+  <!-- Botão para limpar os dados -->
 </form>
 </body>
 </html>
