@@ -1,58 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="utf-8" />
-    <title> Conversor de temperaturas </title>
-    <link rel="stylesheet" href="./css/style.css">
-      <!-- Referenciando o CSS-->
-     <script 	 
-     type="text/javascript"
-        src="main.js">    
-      </script>
+  <meta charset="utf-8" />
+  <title> Conversor de temperaturas </title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Referenciando o CSS-->
+  <script type="text/javascript" src="main.js">
+  </script>
 </head>
 
-<body> 
-<header>
-     <div class="container">
-    <h2 class="titulo"> (ﾉ^ヮ^)ﾉ*:･ﾟ✧ Conversor de temperaturas ヽ(^◇^*)/</h2>
-     </div>
-</header>
+<body>
+  <header>
+    <div class="container">
+      <h2 class="titulo"> (ﾉ^ヮ^)ﾉ*:･ﾟ✧ Conversor de temperaturas ヽ(^◇^*)/</h2>
+    </div>
+  </header>
 
-<form style="border: 1.5px double black; background-color: violet;
-	padding: 25px;text-align:center;"
-  name="convert">
-  <!--Design do Conversor principal -->
 
-        Insira aqui seu valores: <input 	type="text" 
-		name="ftemp" 
-		size="7"
+   <br> Insira aqui seu valores: <br/>
 
-onchange="convertTemp('ftoc')">  °F é equivalente a
+   <br> <input type="text" name="ftemp" size="7" onchange="convertTemp('ftoc')"> °F é equivalente a  <br/>
 
-<input 	type="text" 
-	name="ctemp" 
-	size="7"
+   <br>  <input type="text" name="ctemp" size="7" onchange="convertTemp('ctof')"> C° e  <br/>
+    
+   <br> <input type="text" name="ktemp" size="7" onchange="convertTemp('ktof')">
+    K  <br/>
 
-onchange="convertTemp('ctof')">
+    <!-- Função referente à conversão -->
 
-C° e  
+    <br /><br />
+    <input class="botao" type="button" value="Limpar para nova conversão" onclick="clearAll();">
 
-<input 	type="text" 
-	name="ktemp" 
-	size="7"
-
-onchange="convertTemp('ktof')">
-
-K
-
-<!-- Função referente à conversão -->
-
-<br /><br />
-<input 	type="button" 
-	value="Limpar para nova conversão" 
-  onclick="clearAll();">
-  
-  <!-- Botão para limpar os dados -->
-</form>
+    <!-- Botão para limpar os dados -->
+  </form>
 </body>
+
 </html>
